@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Distance Calculator</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Address Distance Calculator</h1>
+    <form id="addressForm">
+        <label for="startAddress">Start Address:</label><br>
+        <input type="text" id="startAddress" name="startAddress" required><br><br>
+        <label for="endAddress">End Address:</label><br>
+        <input type="text" id="endAddress" name="endAddress" required><br><br>
+        <button type="submit">Calculate Distance</button>
+    </form>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: { lat: 0, lng: 0 },
+            });
+
+            const geocoder = new google.maps.Geocoder();
+
+            document.getElementById("addressForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const startAddress = document.getElementById("startAddress").value;
+                const endAddress = document.getElementById("endAddress").value;
+
+                geocodeAddress(geocoder, map, startAddress, "Start");
+                geocodeAddress(geocoder, map, endAddress, "End");
+
+                calculateDistance(startAddress, endAddress);
+            });
+        }
+
+        function geocodeAddress(geocoder, map, address, label) {
+            geocoder.geocode({ address: address }, function (results, status) {
+                if (status === "OK") {
+                    map.setCenter(results[0].geometry.location);
+                    new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location,
+                        label: label
+                    });
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+        }
+
+        function calculateDistance(start, end) {
+            const service = new google.maps.DistanceMatrixService();
+            service.getDistanceMatrix({
+                origins: [start],
+                destinations: [end],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.IMPERIAL, // Use miles
+            }, function (response, status) {
+                if (status == google.maps.DistanceMatrixStatus.OK) {
+                    const distance = response.rows[0].elements[0].distance.text;
+                    alert("The distance between the two addresses is: " + distance);
+                } else {
+                    alert("Error: " + status);
+                }
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEY9LYMfIEhhQDwtMrLhj-5EM9rxsAjd8&callback=initMap"></script>
+    <!-- Replace "YOUR_API_KEY" with your actual Google Maps API key AIzaSyBEY9LYMfIEhhQDwtMrLhj-5EM9rxsAjd8-->
+</body>
+</html>
