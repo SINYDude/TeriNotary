@@ -17,8 +17,8 @@
 
 
 <div class="flex-headNav" >
-    <a href="">One</a>
-    <a href="">Two</a>
+    <a href="#travelCalc">Travel Calulator</a>
+    <a href="#Services">Services</a>
     <a href="" style="margin-right: 10px;">Three</a>
 </div>
 <body>
@@ -40,82 +40,66 @@
     </div>
     
 
-    <div class="flex-body">
-       
-        <div style="max-width: 85rem;  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; border-radius: 1%;">
-            <div class="flex-bodyPar">
-            
-                <p style="margin-left: 3em; margin-right: 3em;">
-                    Are you in need of notary services in the Belton Tx or Temple Tx area?
-                </p> 
-                <p> Am a notary public and able to travel to assist you with all your document notarization needs.</p>
-            </div>
-
-        </div>
-
-        <div style="max-width: 85rem;  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; border-radius: 1%;">
-            <div class="flex-bodyPar">
-                <p>
-                    Whether it’s a legal document, real estate transaction, or personal paperwork, I got you covered.
-                </p>
-
-                <p>
-                    Why Choose Our Notary Services?
-                    Convenience: We offer flexible scheduling, including evenings and weekends. No need to take time off work or disrupt your busy day.
-                    Accuracy: Our notary public pays meticulous attention to detail, ensuring that your documents are properly executed and legally binding.
-                    Mobile Services: Can’t come to us? No problem! We provide mobile notary services. We'll meet you at your home, office, or any convenient location.
-                
-                </p>
-            </div>
-            <div class="flex-bodyPar">
-                <div style="flex-direction: column;">
-                    <div>
-                        <ul class="bodyList" >
-                            <li>Coffee</li>
-                            <li>Tea</li>
-                            <li>Coca Cola</li>
-                        </ul>
-                    </div>
-                    <p>
-                        Wide Range of Documents: We handle various types of documents, including:
-                        Loan documents
-                        Affidavits
-                        Powers of attorney
-                        Wills and trusts
-                        Real estate deeds
-                        Adoption papers
-                        And more!
-                        Our Commitment to Professionalism
-                        Licensed and Bonded: Our notary public is licensed, bonded, and authorized by the state.
-                        Confidentiality: Your personal information and documents are treated with the utmost confidentiality.
-                        Friendly Service: We believe in providing a friendly and approachable service. No stuffy offices here!
-                        Contact Us Today
-                        Don’t leave your important documents to chance. Trust our experienced notary public to handle your notarization needs promptly and accurately. Call us at [Phone Number] or email [Email Address] to schedule an appointment.
-
-                        Disclaimer: This advertisement is for illustrative purposes only. Please consult with our notary public for specific details and pricing.
-                    </p>
-                </div>
-            </div>
+    <div class="flex-bodyHead">
+        <div style="max-width: 1000px;">
+            <p>Are you in need of notary services in Belton Tx or Temple Tx area?</p>
         </div>
     </div>
 
+    <div class="flex-body">        
+        <div class="flex-bodyPar" >
+            <p> Am a notary public and able to travel and assist you with all your document notarization needs.</p>
 
+            <p> Whether it’s a legal document, real estate transaction, or personal paperwork, I got you covered. </p>
+        </div>    
+    </div>
+        
+    <div class="flexMidbody">
+        
+        <div>
+            <p id="Services">I can handle wide range of documents, including</p>
+            
+            <ul class="bodyList" >
+                <li>Loan documents</li>
+                <li>Affidavits</li>
+                <li>Powers of attorney</li>
+                <li>Wills and trusts</li>
+                <li>Real estate deeds</li>
+                <li>Adoption papers</li>
+                <li>And more!</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div>
+        <p id="travelCalc">Travel estamater</p>
 
+        <form id="addressForm">
+            <label for="startAddress">Start Address:</label><br>
+            <input type="text" id="startAddress" name="startAddress" required><br><br>
+            <label for="endAddress">End Address:</label><br>
+            <input type="text" id="endAddress" name="endAddress" required><br><br>
+            <button type="button" onclick="calculateDistance()">Calculate Distance</button>
+        </form>
+        <p id="totalDistance"></p>
 
+    </div>
+    
+    <div class="flex-bodyClose">
+        <b>
+        <p style="text-align: center;">Contact Today</p>
+        <p style="text-align: center;">email [teriBrown@gmail.com] to schedule an appointment.</p>
+        </b>
+        <p>Commitment</p>
+        <p>Licensed and Bonded:I am licensed, bonded, and authorized by the state.</p>
+        <p>Confidentiality: Your personal information and documents are treated with the utmost confidentiality.</p> 
+        <p>Friendly : I believe in providing a friendly, private,  judgment free service.</p>
+        
+    
+        </p>  
+    </div>
 
-
-
-
-
-
-    <form id="addressForm">
-        <label for="startAddress">Start Address:</label><br>
-        <input type="text" id="startAddress" name="startAddress" required><br><br>
-        <label for="endAddress">End Address:</label><br>
-        <input type="text" id="endAddress" name="endAddress" required><br><br>
-        <button type="button" onclick="calculateDistance()">Calculate Distance</button>
-    </form>
-    <p id="totalDistance"></p>
 
 
     <script>
