@@ -88,5 +88,6 @@ ul.bodyList{
     font-size: 3em;
 text-indent: 3em;
     p {
+        font-family: Verdana, sans-serif;
     }
 }
