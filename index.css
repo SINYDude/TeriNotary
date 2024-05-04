@@ -3,6 +3,16 @@ h1 {
     margin: 0;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700 */
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 body {
     display: flex; 
     flex-direction: column;   
@@ -41,7 +51,7 @@ body {
 
     h1 {
         /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-        font-family: 'Brush Script MT', cursive;
+       
         font-size: 4vw;
         letter-spacing: 1rem;
         font-stretch: expanded;
