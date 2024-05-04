@@ -58,7 +58,7 @@ body {
         text-wrap:nowrap;
     }
 
-    p{
+    p {
         margin: 0;
     }
 }
@@ -147,6 +147,21 @@ ul.bodyList{
     font-size: 2em;
     padding-bottom: 15px;
 }
+
+
+.flex-pricesBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-pricesBarInner {
+    width: 33%;
+    p {
+        text-align: center;
+    }
+}
+
 
 .flex-bodyClose {
     display: flex;
