@@ -13,6 +13,33 @@ h1 {
   font-style: normal;
 }
 
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+
 body {
     display: flex; 
     flex-direction: column;   
@@ -41,13 +68,13 @@ body {
 .flex-headerMain {
 
     display: flex;
-    
+    flex-wrap: wrap;    
     
     align-items: flex-start;
     justify-content:left;
     gap: 0;
     font-size: 2rem;
-        
+    font-family: roboto-light;    
 
     h1 {
         /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
@@ -95,27 +122,28 @@ ul.bodyList{
     display: flex;
     flex-direction: column;
     align-items: center;    
-    font-size: 3em;
-    text-indent: 3px;    
+    font-size: 2.6vw;
     background-color: brown;
+
+    font-family: roboto-light;    
+    
     p {
 
         text-indent: 8rem;    
 
-        font-family: Verdana, sans-serif;
+        
         color: white;
     }
 }
 
 
-
-
 .flex-body{
     display: flex;
     flex-direction: column;
+    
+
     /* align Body */
     align-items:flex-end;
-    
 }
 
 
@@ -129,9 +157,11 @@ ul.bodyList{
     padding-left: 50px;
 
     background-color: beige;
+    font-family: roboto-light;    
+    
     p {
         margin-right: 100px;
-        font-family: Verdana, sans-serif;
+        
     }
 }
 
@@ -140,10 +170,11 @@ ul.bodyList{
     flex-direction: column;
     background-color: beige;
     text-align: center;
+
     /* align Body */
     align-items:center;
     
-    font-family: Verdana, sans-serif;
+    font-family: roboto-light;    
     font-size: 2em;
     padding-bottom: 15px;
 }
@@ -152,16 +183,32 @@ ul.bodyList{
 .flex-pricesBar {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .flex-pricesBarInner {
-    width: 33%;
+    
+    margin-left: 15px;
     p {
         text-align: center;
     }
+    
 }
 
+.boxBorder {
+	width: 30vw;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: 200;
+	padding: 0 4vw 4vw;
+	border-right: 2px;
+	border-left: 0;
+	border-style: solid;
+/* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
+	border-image: linear-gradient(to bottom, white, black, white) 1 100%;
+}
 
 .flex-bodyClose {
     display: flex;
@@ -171,7 +218,7 @@ ul.bodyList{
     /* align Body */
     align-items:left;
     margin-left: 10px;
-    font-family: Verdana, sans-serif;
+    font-family: roboto-light;    
     font-size: 1.5em;
     padding-top: 20px;
     padding-bottom: 20px;
