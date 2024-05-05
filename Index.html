@@ -87,8 +87,9 @@
     <div class="flex-pricesBar">
         
         <div class="boxBorder">
+            <span ><img class="icenter" src="/assets/stamp (2).png">  </span>
             <div class="flex-pricesBarInner">
-                <span ><img class="icenter" src="/assets/stamp (2).png">  </span>
+                
                 <br>
                 <p class="roboto-bold">Fees</p>
                 <br>
@@ -122,64 +123,71 @@
                     <input type="hidden" class="form-control" id="startAddress" name="startAddress" value="3360 W US Hwy 190 Service Rd, Belton, TX 76513" required>
                     <label for="endAddress">Your Location:</label>
                     <input type="text"  class="form-control  form-control-sm" id="endAddress" name="endAddress" required></form><br>
-                    <button type="button" class="btn btn-primary mb-3" onclick="calculateDistance()">Estimate Travel Cost</button>
+                    <button type="button" class="btn btn-primary btn-sm mb-3" onclick="calculateDistance()">Estimate Travel Cost</button>
                 </form>
             <p id="totalDistance"></p>
         </div>
     </div>
 
-    <!-- Wrapper container -->
-    <div class="container-sm py-4">
 
-        <!-- Bootstrap 5 starter form -->
-        <form id="contactForm">
-    
-        <!-- Name input -->
-        <div class="mb-3">
-            <label class="form-label" for="name">Name</label>
-            <input class="form-control" id="name" type="text" placeholder="Name" />
+    <div class="contactForm" style="align-self: center;">
+        <div style="background-color: black; color: white;">
+            <p style="text-align: center;">Contact Today</p>
+            <p>If you have any questions or to schedule an appointment.</p>
         </div>
-    
-        <!-- Email address input -->
-        <div class="mb-3">
-            <label class="form-label" for="emailAddress">Email Address</label>
-            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
-        </div>
-    
-        <!-- Message input -->
-        <div class="mb-3">
-            <label class="form-label" for="message">Message</label>
-            <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
-        </div>
-    
-        <!-- Form submit button -->
-        <div class="d-grid">
-            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-        </div>
-    
+        <form>
+            <!-- Name input -->
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control form-control-sm" name="yourname" type="text" placeholder="Name" />
+            </div>
+        
+            <!-- Email address input -->
+            <div class="mb-3">
+                <label class="form-label" for="emailAddress">Email Address</label>
+                <input class="form-control form-control-sm" name="emailaddress" type="email" placeholder="Email Address" />
+            </div>
+        
+            <!-- Message input -->
+            <div class="mb-3">
+                <label class="form-label" for="bodymessage">Message</label>
+                <textarea class="form-control form-control-sm" name="bodymessage" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+                </div>
+            
+            <!-- Form submit button -->
+            <div class="d-grid">
+                <button class="btn btn-primary btn-sm" type="submit" onclick="submitForm()">Submit</button>
+            </div>
         </form>
     
     </div>
 
-    
-
 
 
     <div class="flex-bodyClose">
-        <b>
-        <p id="contactMe" style="text-align: center;">Contact Today</p>
-        <p style="text-align: center;">email [teriBrown@gmail.com] to schedule an appointment.</p>
-        </b>
         <p>Commitment</p>
         <p>Licensed and Bonded:I am licensed, bonded, and authorized by the state.</p>
         <p>Confidentiality: Your personal information and documents are treated with the utmost confidentiality.</p> 
         <p>Friendly : I believe in providing a friendly, private,  judgment free service.</p>
         
     </div>
+    
+    
 
 
+    
+    <script>
+    function submitForm(){
+        var urname = document.getElementsByName("yourname")[0].value;
+        var mbody = document.getElementsByName("bodymessage")[0].value;
+        var uremail = document.getElementsByName("emailaddress")[0].value;
+        window.open("mailto:zapkenp@gmail.com?subject=**Notary%20Request%20for%20"+urname+"&body=Requester%20Email:%20"+uremail+"%0A"+"%20Requester%20Body:"+"%0A"+mbody);
+    }
+    </script>
 
     <script>
+        
+        
         function calculateDistance() {
             const startAddress = document.getElementById("startAddress").value;
             const endAddress = document.getElementById("endAddress").value;

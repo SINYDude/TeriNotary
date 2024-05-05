@@ -46,6 +46,7 @@ body {
     margin: 0;
     gap: 3rem;
     
+    
 }
 
 .flex-headNav {
@@ -184,6 +185,7 @@ ul.bodyList{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
     text-wrap:nowrap;
 
     
@@ -191,8 +193,9 @@ ul.bodyList{
 
 .flex-pricesBarInner {
     
-    margin-left: 15px;
     font-size: large;
+    padding: 20px;
+    align-content: flex-start;
     
     p {
         text-align: center;
@@ -219,6 +222,17 @@ ul.bodyList{
 	border-style: solid;
 /* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
 	border-image: linear-gradient(to bottom, white, black, white) 1 100%;
+}
+
+.contactForm {
+    
+    
+    p{
+        text-align: center;
+        font-family: roboto-bold ;
+        margin: 0;
+    }
+
 }
 
 .flex-bodyClose {
