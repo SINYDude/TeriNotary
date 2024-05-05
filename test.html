@@ -1,0 +1,24 @@
+<form>
+    <h2>Contact us</h2>
+    <p><label>First Name:</label> <input name="myEmail" type="text" /></p>
+    <p><label>Email Address:</label> <input style="cursor: pointer;" name="myEmail" type="text" /></p>
+    <p><label>Message:</label>  <textarea name="message"></textarea> </p>
+    <p><input type="submit" value="Send" /></p>
+    </form>
+
+    <p><a href="mailto:zapkenp@gmail.com?subject=**\ Notary Apointment Request /** &body=Hello! This is the body of my email. Thanks!" target="_blank">Send an email!</a></p>
+
+
+    <form>
+    <input type="text" name="firstname" placeholder="First Name">
+    <input type="text" name="lastname" placeholder="Last Name">
+    <button type="submit" class="submit" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+function submitForm(){
+    var fname = document.getElementsByName("firstname")[0].value;
+    var lname = document.getElementsByName("lastname")[0].value;
+    window.open("mailto:someone@example.com?subject=Test%20Email&body=First%20Name:%20"+fname+"%20Last%20Name:"+lname);
+}
+</script>
