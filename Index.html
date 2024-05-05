@@ -25,7 +25,7 @@
 <div class="flex-headNav" >
     <a href="#travelCalc">Travel Calulator</a>
     <a href="#Services">Services</a>
-    <a href="" style="margin-right: 10px;">Three</a>
+    <a href="#contactMe" style="margin-right: 10px;">Contact</a>
 </div>
 <body style="background-color: white;">
 
@@ -43,7 +43,7 @@
                         <p>Notary Services</p>    
                 </div>
                 <div style="align-self: flex-end; ">
-                    <img  style="max-width: 250px; height: auto; margin-right: 160px; margin-top: 50px;" src="/assets/notary.png"/>
+                    <img  style="max-width: 250px; height: auto; margin-right: 160px; margin-top: 50px;" src="/assets/texasflag.png"/>
             </div>
             </div>
         </div>
@@ -88,11 +88,13 @@
         
         <div class="boxBorder">
             <div class="flex-pricesBarInner">
-                <p class="roboto-bold"> <b>Fees</b> </p>
+                <span ><img class="icenter" src="/assets/stamp (2).png">  </span>
                 <br>
-                <p>Acknowledgments -  10.00$ </p>
-                    <p> Jurats- 10.00$ </p>
-                    <p>Verbal Oath/Affirmation- 10.00$ </p>
+                <p class="roboto-bold">Fees</p>
+                <br>
+                <p>Acknowledgments -  --.--$ </p>
+                    <p> Jurats- --.--$ </p>
+                    <p>Verbal Oath/Affirmation- --.--$ </p>
                     <br>
                     <p>Plus travel fees</p>
                 </p>
@@ -108,8 +110,14 @@
 
         
         <div class="flex-pricesBarInner">
-            <p id="travelCalc"  class="roboto-bold" style="width: 500px;"> <b>Travel Estamater</b></p>
-                <form id="addressForm">
+            
+                <span ><img class="icenter" src="/assets/calculator.png">  </span>
+            
+                <br>
+                
+            <p id="travelCalc"  class="roboto-bold" style="width: 500px;">Estimate Travel</p>
+            
+            <form id="addressForm">
                     
                     <input type="hidden" class="form-control" id="startAddress" name="startAddress" value="3360 W US Hwy 190 Service Rd, Belton, TX 76513" required>
                     <label for="endAddress">Your Location:</label>
@@ -159,7 +167,7 @@
 
     <div class="flex-bodyClose">
         <b>
-        <p style="text-align: center;">Contact Today</p>
+        <p id="contactMe" style="text-align: center;">Contact Today</p>
         <p style="text-align: center;">email [teriBrown@gmail.com] to schedule an appointment.</p>
         </b>
         <p>Commitment</p>
@@ -186,7 +194,7 @@
                             const endLocation = results2[0].geometry.location;
                             // Calculate distance using Haversine formula
                             const distance = haversine(startLocation.lat(), startLocation.lng(), endLocation.lat(), endLocation.lng());
-                            document.getElementById("totalDistance").innerHTML = "Total distance: " + distance.toFixed(2) + " miles";
+                            document.getElementById("totalDistance").innerHTML = "Total distance: " + distance.toFixed(2) * 2 + "$ )price not shown error miles";
                         } else {
                             alert("Geocode was not successful for the following reason: " + status2);
                         }

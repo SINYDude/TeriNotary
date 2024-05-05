@@ -184,6 +184,8 @@ ul.bodyList{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    text-wrap:nowrap;
+
     
 }
 
@@ -200,6 +202,12 @@ ul.bodyList{
     
 }
 
+.icenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+  }
 .boxBorder {
 	width: 30vw;
 	font-size: 1em;
