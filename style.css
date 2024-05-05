@@ -44,7 +44,6 @@ body {
     display: flex; 
     flex-direction: column;   
     margin: 0;
-    background-color:honeydew;
     gap: 3rem;
     
 }
@@ -74,7 +73,8 @@ body {
     justify-content:left;
     gap: 0;
     font-size: 2rem;
-    font-family: roboto-light;    
+    font-family: roboto-light;   
+    background-color: white; 
 
     h1 {
         /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
@@ -122,14 +122,13 @@ ul.bodyList{
     display: flex;
     flex-direction: column;
     align-items: center;    
-    font-size: 2.6vw;
+    font-size: 2.5vw;
     background-color: brown;
 
     font-family: roboto-light;    
     
     p {
 
-        text-indent: 8rem;    
 
         
         color: white;
@@ -191,8 +190,12 @@ ul.bodyList{
 .flex-pricesBarInner {
     
     margin-left: 15px;
+    font-size: large;
+    
     p {
         text-align: center;
+        margin: 0;
+        font-family: roboto-regular;    
     }
     
 }
